@@ -12,24 +12,36 @@
  -->
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="📈 CoinFox: Crypto currency portfolio tracker, Bitcoin, Ethereum, [A]ltcoins, oh my">
-    <meta name="description" content="💰 Securely track all of your crypto portfolio holdings with Coinfox. Supports over 2,000 cryptocoins: real-time price quotes and historical charts. Track your total balance, gain percentages and more in a single dashboard. The slickest crypto currency portfolio tracker on the web!" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="📈 CoinFox: Crypto currency portfolio tracker, Bitcoin, Ethereum, [A]ltcoins, oh my"
+    />
+    <meta
+      name="description"
+      content="💰 Securely track all of your crypto portfolio holdings with Coinfox. Supports over 2,000 cryptocoins: real-time price quotes and historical charts. Track your total balance, gain percentages and more in a single dashboard. The slickest crypto currency portfolio tracker on the web!"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no"
+    />
     <meta name="HandheldFriendly" content="true" />
-    <meta name="theme-color" content="#040d14">
-    <link rel="apple-touch-icon" href="/mobile-icon.png">
-    <link rel="icon" sizes="192x192" href="/mobile-icon.png">
+    <meta name="theme-color" content="#040d14" />
+    <link rel="apple-touch-icon" href="/mobile-icon.png" />
+    <link rel="icon" sizes="192x192" href="/mobile-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="CoinFox">
+    <meta name="apple-mobile-web-app-title" content="CoinFox" />
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <script src="https://use.fontawesome.com/224e5e0840.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300"
+      rel="stylesheet"
+    />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -41,36 +53,55 @@
     -->
     <title>Coinfox: Crypto coin portfolio tracker</title>
     <script type="text/javascript">
-      (function(l) {
-        if (l.search.indexOf("spa") > -1) {
-          console.log('adjusting redirect');
-          var redirectPath = localStorage.getItem("spa");
-          window.history.replaceState(null, null, redirectPath);
-          localStorage.removeItem('spa');
+      ;(function (l) {
+        if (l.search.indexOf('spa') > -1) {
+          console.log('adjusting redirect')
+          var redirectPath = localStorage.getItem('spa')
+          window.history.replaceState(null, null, redirectPath)
+          localStorage.removeItem('spa')
         }
-      }(window.location))
+      })(window.location)
     </script>
-
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/buffer@6.0.3/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/process@0.11.10/browser.min.js"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-2918890-15', 'auto');
-      ga('send', 'pageview');
-      if(web3 || window.web3){
+      window.Buffer = buffer.Buffer
+      window.process = process
+      window.global = window
+    </script>
+    <script>
+      ;(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r
+        ;(i[r] =
+          i[r] ||
+          function () {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      )
+      ga('create', 'UA-2918890-15', 'auto')
+      ga('send', 'pageview')
+      if (web3 || window.web3) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'Crypto',
           eventAction: 'Web3 Enabled',
-         });
-       }
+        })
+      }
     </script>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.

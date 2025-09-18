@@ -36,9 +36,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build && rm -rf ./docs && mv ./build ./docs && echo 'coinfox.co' > ./docs/CNAME",
-    "test": "react-app-rewired test",
+    "start": "craco start",
+    "build": "craco build && rm -rf ./docs && mv ./build ./docs && echo 'coinfox.co' > ./docs/CNAME",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
